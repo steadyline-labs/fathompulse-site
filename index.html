@@ -120,6 +120,10 @@
     font-size: 15px;
     font-family: inherit;
   }
+  /* iOS Safari zooms the page when a field under 16px gets focus; iOS only. */
+  @supports (-webkit-touch-callout: none) {
+    .waitlist input[type="email"] { font-size: 16px; }
+  }
   .waitlist input[type="email"]:focus {
     outline: 2px solid var(--accent);
     outline-offset: 1px;
